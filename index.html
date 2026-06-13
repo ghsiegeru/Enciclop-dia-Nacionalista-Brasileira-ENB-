@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enciclopédia do Nacionalismo Brasileiro - Portal Educativo</title>
+
+<meta name="description" content="Portal educativo sobre a história do nacionalismo brasileiro, trabalhismo, desenvolvimentismo e personagens históricos do Brasil.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+--verde-1:#0f3b2e;
+--verde-2:#155d46;
+--verde-3:#1f8a63;
+
+--amarelo:#d4a017;
+
+--claro:#f7f7f7;
+--branco:#ffffff;
+
+--escuro:#141414;
+--cinza:#2f2f2f;
+
+--sombra:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Montserrat',sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#fdfdfd,
+#f6f6f6
+);
+
+color:#222;
+
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:9999;
+
+background:
+rgba(15,59,46,.95);
+
+backdrop-filter:blur(8px);
+
+border-bottom:
+1px solid rgba(255,255,255,.1);
+
+}
+
+.nav-container{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:18px 24px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+.logo{
+
+font-size:1.3rem;
+
+font-weight:800;
+
+color:white;
+
+letter-spacing:1px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:24px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ffd95a;
+
+}
+
+.hero{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("https://upload.wikimedia.org/wikipedia/commons/9/98/Congresso_Nacional_do_Brasil.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:120px 20px 80px;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:950px;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+font-weight:800;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+max-width:800px;
+
+margin:auto;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:15px 28px;
+
+background:#d4a017;
+
+color:black;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:8px;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.section{
+
+padding:90px 25px;
+
+}
+
+.container{
+
+max-width:1300px;
+
+margin:auto;
+
+}
+
+.section-title{
+
+font-size:2.3rem;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+color:var(--verde-1);
+
+}
+
+.section-subtitle{
+
+font-size:1.1rem;
+
+margin-bottom:40px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:28px;
+
+border-radius:16px;
+
+box-shadow:var(--sombra);
+
+}
+
+.card h3{
+
+margin-bottom:12px;
+
+color:var(--verde-2);
+
+}
+
+.card p{
+
+font-size:.95rem;
+
+}
+
+.person-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+.person{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:var(--sombra);
+
+}
+
+.person img{
+
+width:100%;
+height:320px;
+
+object-fit:cover;
+
+}
+
+.person-content{
+
+padding:25px;
+
+}
+
+.person-content h3{
+
+margin-bottom:10px;
+
+color:var(--verde-1);
+
+}
+
+.timeline{
+
+border-left:5px solid var(--verde-2);
+
+padding-left:30px;
+
+margin-top:40px;
+
+}
+
+.timeline-item{
+
+margin-bottom:45px;
+
+}
+
+.timeline-item h4{
+
+font-size:1.3rem;
+
+color:var(--verde-2);
+
+margin-bottom:10px;
+
+}
+
+.highlight{
+
+background:
+linear-gradient(
+90deg,
+var(--verde-1),
+var(--verde-2)
+);
+
+color:white;
+
+padding:70px 30px;
+
+}
+
+.highlight h2{
+
+font-size:2.5rem;
+
+margin-bottom:20px;
+
+}
+
+.highlight p{
+
+max-width:1000px;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:15px;
+
+margin-top:35px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+}
+
+.quote{
+
+background:white;
+
+padding:35px;
+
+border-left:6px solid var(--amarelo);
+
+box-shadow:var(--sombra);
+
+margin-top:30px;
+
+}
+
+.quote p{
+
+font-size:1.1rem;
+
+font-style:italic;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:2.6rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="nav-container">
+
+<div class="logo">
+🇧🇷 Enciclopédia do Nacionalismo Brasileiro
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#inicio">Início</a></li>
+
+<li><a href="#conceitos">Conceitos</a></li>
+
+<li><a href="#personagens">Personagens</a></li>
+
+<li><a href="#cronologia">Cronologia</a></li>
+
+<li><a href="#galeria">Galeria</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>
+História do Nacionalismo Brasileiro
+</h1>
+
+<p>
+
+Portal educativo dedicado ao estudo das correntes nacionalistas,
+desenvolvimentistas e trabalhistas presentes na história política,
+econômica e social do Brasil entre os séculos XIX, XX e XXI.
+Site feito pela Frente Nacional Popular Brasileira (FNPB). 
+
+</p>
+
+<a href="#conceitos" class="hero-btn">
+Explorar Conteúdo
+</a>
+
+</div>
+
+</section>
+
+<section class="section" id="conceitos">
+
+<div class="container">
+
+<h2 class="section-title">
+Conceitos Fundamentais
+</h2>
+
+<p class="section-subtitle">
+
+O nacionalismo brasileiro assumiu diferentes formas ao longo da história.
+Em determinados períodos esteve associado à soberania nacional,
+à industrialização, à integração territorial, à valorização da cultura
+brasileira e à ampliação da capacidade econômica do país.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🇧🇷 Soberania Nacional</h3>
+
+<p>
+
+Refere-se à capacidade do Estado brasileiro de tomar decisões
+autônomas em política interna e externa, preservando sua independência
+institucional e territorial.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏭 Desenvolvimento Econômico</h3>
+
+<p>
+
+Diversas correntes nacionalistas defenderam a industrialização,
+a infraestrutura e a modernização econômica como instrumentos
+de fortalecimento nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📚 Identidade Cultural</h3>
+
+<p>
+
+Inclui debates sobre língua, símbolos nacionais, patrimônio histórico,
+educação e memória coletiva.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="highlight">
+
+<div class="container">
+
+<h2>
+O Nacionalismo Brasileiro não foi uma única corrente
+</h2>
+
+<p>
+
+Ao longo da história existiram interpretações distintas do nacionalismo.
+Algumas enfatizaram o desenvolvimento econômico, outras a integração
+territorial, outras a proteção de recursos estratégicos e outras
+aspectos culturais. Por isso, historiadores frequentemente tratam
+o nacionalismo brasileiro como um conjunto de tradições políticas
+e intelectuais, e não como um movimento único.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="section" id="personagens">
+
+<div class="container">
+
+<h2 class="section-title">
+Personagens Históricos Frequentemente Associados ao Tema
+</h2>
+
+<div class="person-grid">
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Getulio_Vargas_1930.jpg">
+
+<div class="person-content">
+
+<h3>Getúlio Vargas</h3>
+
+<p>
+
+Presidente do Brasil em diferentes períodos do século XX.
+Seu governo esteve associado a políticas de industrialização,
+legislação trabalhista e fortalecimento das instituições federais.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Juscelino_Kubitschek.jpg">
+
+<div class="person-content">
+
+<h3>Juscelino Kubitschek</h3>
+
+<p>
+
+Conhecido pelo Plano de Metas e pela construção de Brasília,
+buscando acelerar a modernização econômica e a infraestrutura nacional.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Joao_Goulart.jpg">
+
+<div class="person-content">
+
+<h3>João Goulart</h3>
+
+<p>
+
+Presidente entre 1961 e 1964.
+Seu governo ficou marcado por debates envolvendo reformas
+econômicas, sociais e institucionais.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Leonel_Brizola.jpg">
+
+<div class="person-content">
+
+<h3>Leonel Brizola</h3>
+
+<p>
+
+Político brasileiro associado ao trabalhismo.
+Governador do Rio Grande do Sul e do Rio de Janeiro,
+participou de debates sobre educação pública,
+desenvolvimento regional e organização do Estado.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/En%C3%A9as_Carneiro.jpg">
+
+<div class="person-content">
+
+<h3>Enéas Carneiro</h3>
+
+<p>
+
+Médico, professor e político brasileiro.
+Ficou conhecido por defender projetos voltados
+ao desenvolvimento científico, tecnológico e energético
+do Brasil, além de posições ligadas à soberania nacional.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Ciro_Gomes_2018.jpg">
+
+<div class="person-content">
+
+<h3>Ciro Gomes</h3>
+
+<p>
+
+Político brasileiro que participou dos debates
+contemporâneos sobre desenvolvimento econômico,
+industrialização e planejamento estatal.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="person">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Julio_de_Castilhos.jpg">
+
+<div class="person-content">
+
+<h3>Júlio de Castilhos</h3>
+
+<p>
+
+Importante figura política da Primeira República.
+Exerceu forte influência sobre o pensamento político
+gaúcho e sobre estruturas administrativas estaduais.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="quote">
+
+<p>
+
+"A história do nacionalismo brasileiro envolve correntes,
+movimentos, intelectuais e governantes distintos,
+muitas vezes divergentes entre si, mas frequentemente
+preocupados com temas como soberania, desenvolvimento,
+integração territorial e modernização nacional."
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="cronologia">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Cronologia Histórica
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h4>1822 — Independência do Brasil</h4>
+
+<p>
+
+A independência consolidou a formação do Estado brasileiro
+e inaugurou debates sobre identidade nacional,
+organização institucional e desenvolvimento econômico.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1889 — Proclamação da República</h4>
+
+<p>
+
+A mudança de regime abriu novos debates sobre
+federalismo, centralização administrativa,
+industrialização e modernização nacional.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1930 — Revolução de 1930</h4>
+
+<p>
+
+Período frequentemente associado à ampliação
+da participação do Estado na economia e ao surgimento
+de novas políticas industriais.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1942–1945 — Segunda Guerra Mundial</h4>
+
+<p>
+
+A participação brasileira no conflito impulsionou
+setores industriais e fortaleceu projetos de infraestrutura.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1956–1961 — Plano de Metas</h4>
+
+<p>
+
+Período marcado por investimentos em energia,
+transportes, indústria automobilística e pela construção
+de Brasília.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1964–1985 — Regime Militar</h4>
+
+<p>
+
+Fase caracterizada por projetos de integração territorial,
+grandes obras de infraestrutura e diferentes políticas
+econômicas ao longo de duas décadas.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>1988 — Constituição Federal</h4>
+
+<p>
+
+A nova constituição reorganizou instituições,
+direitos civis e políticas públicas após a redemocratização.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h4>Século XXI</h4>
+
+<p>
+
+Os debates sobre soberania, industrialização,
+tecnologia, infraestrutura e inserção internacional
+continuam presentes na política brasileira.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Principais Temas Históricos
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>⚙ Industrialização</h3>
+
+<p>
+
+Desde o início do século XX,
+diversos governos e intelectuais defenderam
+o fortalecimento da indústria nacional
+como instrumento de modernização econômica.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚆 Infraestrutura</h3>
+
+<p>
+
+Ferrovias, rodovias, hidrelétricas,
+portos e telecomunicações frequentemente aparecem
+nos debates sobre desenvolvimento nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔬 Ciência e Tecnologia</h3>
+
+<p>
+
+Projetos ligados à pesquisa científica,
+energia nuclear, universidades e inovação
+foram temas recorrentes em diferentes períodos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌎 Política Externa</h3>
+
+<p>
+
+A busca por autonomia diplomática
+e ampliação da influência internacional
+também integrou diversos projetos nacionais.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Documentos e Marcos Históricos
+</h2>
+
+<p class="section-subtitle">
+Alguns acontecimentos e documentos frequentemente estudados por pesquisadores da história política e econômica brasileira.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>📜 Constituição de 1824</h3>
+<p>
+Primeira constituição do Brasil independente, estabelecendo as bases institucionais do Império.
+</p>
+</div>
+
+<div class="card">
+<h3>📜 Constituição de 1891</h3>
+<p>
+Primeira constituição republicana, introduzindo o federalismo moderno no país.
+</p>
+</div>
+
+<div class="card">
+<h3>📜 Constituição de 1934</h3>
+<p>
+Trouxe novas disposições relacionadas ao trabalho, representação política e organização do Estado.
+</p>
+</div>
+
+<div class="card">
+<h3>📜 Constituição de 1988</h3>
+<p>
+Conhecida como Constituição Cidadã, redefiniu diversas garantias e instituições após a redemocratização.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Mapa Histórico do Brasil
+</h2>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:var(--sombra);
+text-align:center;
+">
+
+<svg viewBox="0 0 500 500" width="100%" style="max-width:700px">
+
+<path
+fill="#1f8a63"
+stroke="#0f3b2e"
+stroke-width="4"
+d="
+M140 90
+L240 60
+L350 100
+L420 180
+L390 300
+L300 420
+L190 410
+L110 320
+L80 200
+Z
+"/>
+
+<text x="250" y="240"
+text-anchor="middle"
+fill="white"
+font-size="28"
+font-weight="bold">
+BRASIL
+</text>
+
+</svg>
+
+<p style="margin-top:20px;">
+Representação ilustrativa utilizada para fins visuais dentro do portal.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Perguntas Frequentes
+</h2>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+O nacionalismo brasileiro foi um movimento único?
+</button>
+
+<div class="faq-content">
+
+Não. Historiadores normalmente identificam diversas correntes,
+interpretações e tradições nacionalistas ao longo da história do Brasil.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+Qual a relação entre industrialização e desenvolvimento?
+</button>
+
+<div class="faq-content">
+
+A industrialização frequentemente foi vista como uma ferramenta
+para ampliar a produção nacional e modernizar a economia.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+Todos os personagens apresentados tinham as mesmas ideias?
+</button>
+
+<div class="faq-content">
+
+Não. Muitos deles divergiam significativamente entre si,
+mesmo quando abordavam temas semelhantes.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-btn">
+Este portal possui posicionamento político?
+</button>
+
+<div class="faq-content">
+
+Não. O objetivo do portal é exclusivamente educativo e histórico.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="highlight">
+
+<div class="container">
+
+<h2>
+Considerações Históricas
+</h2>
+
+<p>
+
+O estudo do nacionalismo brasileiro envolve análise de diferentes
+períodos históricos, governos, intelectuais, partidos,
+instituições e projetos econômicos. Muitas interpretações coexistem,
+e pesquisadores frequentemente divergem sobre impactos,
+resultados e significados desses processos.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<h2 style="color:white;margin-bottom:20px;">
+🇧🇷 Enciclopédia do Nacionalismo Brasileiro
+</h2>
+
+<p style="max-width:900px;margin:auto;">
+
+Portal educativo dedicado ao estudo da história política,
+econômica, institucional e cultural do Brasil.
+
+</p>
+
+<div style="
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+">
+
+<span>📚 História</span>
+<span>🏛 Instituições</span>
+<span>🏭 Economia</span>
+<span>⚒ Trabalho</span>
+<span>🇧🇷 Cultura Nacional</span>
+
+</div>
+
+<hr style="
+margin:35px auto;
+max-width:800px;
+border:none;
+border-top:1px solid rgba(255,255,255,.2);
+">
+
+<p>
+© 2026 — Portal Educativo. Conteúdo histórico e informativo.
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+/* FAQ */
+
+document.querySelectorAll(".faq-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+const content=btn.nextElementSibling;
+
+if(content.style.display==="block"){
+
+content.style.display="none";
+
+}else{
+
+content.style.display="block";
+
+}
+
+});
+
+});
+
+/* Rolagem suave */
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(
+this.getAttribute("href")
+);
+
+if(target){
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+});
+
+/* Animação simples */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(
+".card,.person,.timeline-item"
+).forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(30px)";
+el.style.transition="all .6s ease";
+
+observer.observe(el);
+
+});
+
+/* Ano automático */
+
+console.log(
+"Portal carregado em " +
+new Date().getFullYear()
+);
+
+</script>
+
+</body>
+  </html>
