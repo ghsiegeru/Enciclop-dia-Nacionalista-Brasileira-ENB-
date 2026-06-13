@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>História do Nacionalismo Brasileiro</title>
+<title>Enciclopédia do Nacionalismo Brasileiro</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -12,206 +16,385 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
+
+font-family:'Montserrat',sans-serif;
+
 background:#f5f5f5;
 color:#222;
-line-height:1.7;
+
+line-height:1.8;
+
 }
 
 header{
-background:#0d4b36;
-color:white;
-padding:20px;
-position:sticky;
+
+position:fixed;
 top:0;
-z-index:1000;
+left:0;
+
+width:100%;
+
+background:#0d3f31;
+
+z-index:999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-max-width:1200px;
+.navbar{
+
+max-width:1400px;
+
 margin:auto;
-}
 
-nav ul{
 display:flex;
-gap:20px;
-list-style:none;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px;
+
 }
 
-nav a{
+.logo{
+
 color:white;
+
+font-size:1.3rem;
+
+font-weight:800;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:25px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+color:white;
+
 text-decoration:none;
-font-weight:bold;
+
+font-weight:600;
+
 }
 
 .hero{
-height:70vh;
+
+height:100vh;
+
 background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.65)
+),
+
 url("https://images.unsplash.com/photo-1521295121783-8a321d551ad2");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
-align-items:center;
+
 justify-content:center;
+align-items:center;
+
 text-align:center;
-color:white;
+
 padding:20px;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:1000px;
+
 }
 
 .hero h1{
-font-size:3rem;
-margin-bottom:15px;
+
+font-size:4rem;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 28px;
+
+background:#d6a100;
+
+color:black;
+
+text-decoration:none;
+
+font-weight:700;
+
+border-radius:8px;
+
+}
+
+.section{
+
+padding:100px 25px;
+
 }
 
 .container{
-max-width:1200px;
+
+max-width:1300px;
+
 margin:auto;
-padding:70px 20px;
+
 }
 
-h2{
+.section-title{
+
+font-size:2.5rem;
+
 margin-bottom:20px;
-color:#0d4b36;
+
+color:#0d3f31;
+
+font-weight:800;
+
 }
 
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+.section-subtitle{
+
+font-size:1.1rem;
+
+margin-bottom:40px;
+
+}
+
+.text-block{
+
+background:white;
+
+padding:35px;
+
+border-radius:16px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:30px;
+
+}
+
+.text-block p{
+
+margin-bottom:18px;
+
+}
+
+.highlight{
+
+background:
+linear-gradient(
+135deg,
+#0d3f31,
+#19694f
+);
+
+color:white;
+
+padding:70px;
+
+border-radius:18px;
+
 margin-top:30px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
 }
 
 .card{
+
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
 
-.figuras{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
-}
-
-.figura{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.figura img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.figura div{
-padding:20px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
 padding:30px;
+
+border-radius:16px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
 }
 
-@media(max-width:768px){
+.card h3{
+
+color:#0d3f31;
+
+margin-bottom:15px;
+
+}
+
+@media(max-width:900px){
 
 .hero h1{
-font-size:2rem;
+font-size:2.5rem;
 }
 
-nav ul{
+.nav-links{
 display:none;
 }
 
 }
 
 </style>
+
 </head>
+
 <body>
 
 <header>
 
-<nav>
+<div class="navbar">
 
-<h3>🇧🇷 História Política Brasileira</h3>
+<div class="logo">
+🇧🇷 Enciclopédia do Nacionalismo Brasileiro
+</div>
 
-<ul>
-<li><a href="#nacionalismo">Nacionalismo</a></li>
+<ul class="nav-links">
+
+<li><a href="#introducao">Introdução</a></li>
+
+<li><a href="#conceitos">Conceitos</a></li>
+
 <li><a href="#brasil">Brasil</a></li>
-<li><a href="#figuras">Figuras</a></li>
+
+<li><a href="#historia">História</a></li>
+
 </ul>
 
-</nav>
+</div>
 
 </header>
 
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
-<h1>Nacionalismo Brasileiro</h1>
+<h1>
+Enciclopédia do Nacionalismo Brasileiro
+</h1>
 
 <p>
-Portal educativo sobre a história do nacionalismo no Brasil.
+
+Portal educativo dedicado ao estudo histórico, político,
+econômico, social e cultural do nacionalismo brasileiro,
+suas origens, transformações e principais correntes.
+
 </p>
+
+<a href="#introducao" class="btn">
+
+Começar Leitura
+
+</a>
 
 </div>
 
 </section>
 
-<section class="container" id="nacionalismo">
+<section class="section" id="introducao">
 
-<h2>O que é Nacionalismo?</h2>
+<div class="container">
+
+<h2 class="section-title">
+
+Introdução
+
+</h2>
+
+<div class="text-block">
 
 <p>
 
-O nacionalismo é uma corrente de pensamento que enfatiza a identidade
-nacional, a soberania do Estado, a valorização da cultura local e os
-interesses considerados estratégicos para uma nação.
+O nacionalismo é um fenômeno político, cultural e histórico
+que surgiu em diferentes partes do mundo entre os séculos XVIII
+e XIX. Em sua forma mais geral, ele parte da ideia de que uma
+nação constitui uma comunidade histórica dotada de identidade,
+interesses e objetivos próprios.
 
 </p>
 
-<div class="card-grid">
+<p>
 
-<div class="card">
+Ao longo da história moderna, o nacionalismo assumiu formas
+bastante distintas. Em alguns países esteve associado a
+movimentos de independência nacional. Em outros, tornou-se
+um instrumento de integração territorial, construção de
+instituições estatais ou fortalecimento econômico.
 
-<h3>🇧🇷 Soberania</h3>
+</p>
 
 <p>
-Defesa da autonomia nacional e da capacidade de decisão própria.
+
+Por essa razão, historiadores raramente tratam o nacionalismo
+como uma ideologia única e uniforme. Diferentes correntes
+nacionalistas podem defender propostas econômicas,
+sociais e políticas bastante divergentes.
+
 </p>
 
 </div>
 
-<div class="card">
+<div class="highlight">
 
-<h3>📚 Identidade</h3>
+<h2>
 
-<p>
-Valorização da cultura, história e símbolos nacionais.
-</p>
+Uma ideia em constante transformação
 
-</div>
-
-<div class="card">
-
-<h3>🏭 Desenvolvimento</h3>
+</h2>
 
 <p>
-Em algumas correntes, associação com industrialização e infraestrutura.
+
+O significado do nacionalismo variou ao longo dos séculos.
+Em alguns momentos esteve associado à independência,
+em outros à industrialização, ao desenvolvimento econômico,
+à integração nacional ou à preservação cultural.
+
 </p>
 
 </div>
@@ -220,104 +403,847 @@ Em algumas correntes, associação com industrialização e infraestrutura.
 
 </section>
 
-<section class="container" id="brasil">
+<section class="section" id="conceitos">
 
-<h2>O Nacionalismo Brasileiro</h2>
+<div class="container">
+
+<h2 class="section-title">
+
+Conceitos Fundamentais
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+🇧🇷 Nação
+</h3>
 
 <p>
 
-Ao longo da história do Brasil surgiram diferentes interpretações do
-nacionalismo. Algumas enfatizaram o desenvolvimento econômico,
-outras a integração territorial, a industrialização ou a preservação
-da soberania nacional.
+O conceito de nação refere-se a uma comunidade humana
+que compartilha elementos históricos, culturais,
+linguísticos ou políticos.
 
 </p>
 
-<p style="margin-top:20px;">
+</div>
 
-Por isso, historiadores geralmente tratam o nacionalismo brasileiro
-como um conjunto de tradições e correntes distintas, e não como uma
-única escola de pensamento.
+<div class="card">
+
+<h3>
+🛡 Soberania
+</h3>
+
+<p>
+
+A soberania diz respeito à capacidade de um Estado
+exercer autoridade sobre seu território e tomar
+decisões sem submissão a poderes externos.
 
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🏛 Estado Nacional
+</h3>
+
+<p>
+
+O Estado nacional é a estrutura política responsável
+pela administração de uma nação organizada.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+📚 Identidade Nacional
+</h3>
+
+<p>
+
+Envolve símbolos, tradições, narrativas históricas,
+costumes e elementos culturais compartilhados.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="text-block">
+
+<p>
+
+Diversos estudiosos observam que o nacionalismo pode
+assumir dimensões culturais, econômicas, sociais,
+geopolíticas e institucionais.
+
+</p>
+
+<p>
+
+Em alguns contextos históricos, a defesa da soberania
+econômica tornou-se tão importante quanto a preservação
+da soberania territorial.
+
+</p>
+
+<p>
+
+Da mesma forma, projetos de infraestrutura,
+industrialização, educação pública e integração
+regional foram frequentemente apresentados como
+instrumentos de fortalecimento nacional.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="container" id="figuras">
+<section class="section" id="brasil">
 
-<h2>Figuras Históricas Frequentemente Associadas ao Tema</h2>
+<div class="container">
 
-<div class="figuras">
+<h2 class="section-title">
 
-<div class="figura">
+O Nacionalismo Brasileiro
 
-<img src="imagens/vargas.png" alt="Getúlio Vargas">
+</h2>
 
-<div>
+<div class="text-block">
+
+<p>
+
+O nacionalismo brasileiro desenvolveu características
+próprias devido à dimensão continental do país,
+à diversidade cultural da população e à necessidade
+de integrar regiões extremamente diferentes sob uma
+mesma estrutura estatal.
+
+</p>
+
+<p>
+
+Após a Independência em 1822, um dos principais desafios
+do novo Estado brasileiro foi construir instituições
+capazes de manter a unidade territorial e consolidar
+uma identidade nacional comum.
+
+</p>
+
+<p>
+
+Durante o século XIX, intelectuais, políticos e militares
+participaram de debates sobre centralização,
+federalismo, desenvolvimento econômico e integração
+territorial.
+
+</p>
+
+<p>
+
+Ao longo do século XX, a industrialização tornou-se um
+tema central. Muitos pensadores passaram a defender
+que a capacidade produtiva nacional era fundamental
+para fortalecer a independência econômica do país.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+🏭 Industrialização
+</h3>
+
+<p>
+
+Frequentemente vista como instrumento de modernização
+econômica e aumento da autonomia produtiva nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🚆 Infraestrutura
+</h3>
+
+<p>
+
+Ferrovias, rodovias, energia elétrica, telecomunicações
+e portos tornaram-se elementos centrais dos projetos
+de desenvolvimento nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🌎 Política Externa
+</h3>
+
+<p>
+
+Diversas correntes nacionalistas defenderam maior
+autonomia diplomática e capacidade de negociação
+internacional.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="historia">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Formação Histórica do Nacionalismo Brasileiro
+
+</h2>
+
+<div class="text-block">
+
+<p>
+
+A construção da identidade nacional brasileira foi um
+processo gradual que atravessou diferentes períodos
+históricos. No Império, a preocupação principal era
+manter a unidade territorial e consolidar instituições
+capazes de governar um território extremamente vasto.
+
+</p>
+
+<p>
+
+Com a Proclamação da República em 1889, novas correntes
+políticas passaram a discutir a modernização econômica,
+a organização administrativa e a expansão da infraestrutura.
+
+</p>
+
+<p>
+
+Já no século XX, especialmente após a década de 1930,
+o debate sobre desenvolvimento econômico ganhou enorme
+importância, influenciando políticas públicas,
+planejamento estatal e investimentos industriais.
+
+</p>
+
+<p>
+
+O nacionalismo brasileiro passou então a dialogar com
+questões relacionadas à industrialização,
+educação, integração territorial, tecnologia,
+energia e desenvolvimento social.
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+💰 Economia Nacional
+</h3>
+
+<p>
+
+Uma das discussões mais frequentes dentro das correntes
+nacionalistas brasileiras envolveu a capacidade do país
+de controlar seu próprio desenvolvimento econômico.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🏗 Infraestrutura
+</h3>
+
+<p>
+
+Projetos ferroviários, rodoviários, energéticos e
+portuários foram frequentemente considerados elementos
+essenciais para a integração nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🔬 Ciência e Tecnologia
+</h3>
+
+<p>
+
+Diversos intelectuais defenderam que a autonomia
+científica e tecnológica seria necessária para reduzir
+a dependência externa.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="margin-bottom:20px;color:#0d3f31;">
+Nacionalismo Econômico
+</h3>
+
+<p>
+
+O chamado nacionalismo econômico reúne diferentes ideias
+que defendem algum grau de fortalecimento da capacidade
+produtiva nacional.
+
+</p>
+
+<p>
+
+Historicamente, seus defensores argumentaram que países
+em desenvolvimento poderiam enfrentar dificuldades para
+competir com economias já industrializadas.
+
+</p>
+
+<p>
+
+Por essa razão, muitos projetos econômicos brasileiros
+buscaram incentivar a expansão da indústria,
+da infraestrutura e da formação técnica.
+
+</p>
+
+<p>
+
+Ao mesmo tempo, críticos dessas propostas argumentaram
+que políticas excessivamente protecionistas poderiam
+reduzir a competitividade e aumentar custos econômicos.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="margin-bottom:20px;color:#0d3f31;">
+Industrialização
+</h3>
+
+<p>
+
+Durante grande parte do século XX, a industrialização
+foi considerada uma prioridade estratégica para o país.
+
+</p>
+
+<p>
+
+Setores como siderurgia, metalurgia, energia elétrica,
+química pesada e indústria de transformação passaram
+a receber atenção crescente de governos e planejadores.
+
+</p>
+
+<p>
+
+A ideia central era ampliar a capacidade produtiva
+nacional e reduzir a dependência de importações em
+setores considerados estratégicos.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="margin-bottom:20px;color:#0d3f31;">
+Questões Sociais
+</h3>
+
+<p>
+
+A dimensão social também esteve presente em diversas
+correntes nacionalistas brasileiras.
+
+</p>
+
+<p>
+
+Temas como alfabetização, expansão educacional,
+capacitação profissional, saúde pública e integração
+regional foram frequentemente associados ao processo
+de desenvolvimento nacional.
+
+</p>
+
+<p>
+
+A urbanização acelerada ocorrida ao longo do século XX
+também gerou novos desafios relacionados à habitação,
+transporte urbano e inclusão econômica.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Trabalhismo e Desenvolvimento Social
+</h2>
+
+<div class="text-block">
+
+<p>
+
+O trabalhismo brasileiro constituiu uma tradição política
+que enfatizou a importância das relações de trabalho,
+dos direitos sociais e da proteção jurídica dos
+trabalhadores.
+
+</p>
+
+<p>
+
+Ao longo do século XX, o tema do trabalho tornou-se uma
+das principais dimensões do debate político nacional.
+
+</p>
+
+<p>
+
+Diversas reformas legais buscaram regulamentar jornadas,
+férias, contratos e mecanismos de proteção social.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Personagens Históricos
+</h2>
+
+<p class="section-subtitle">
+
+As figuras abaixo são frequentemente estudadas em obras
+sobre história política brasileira. Sua presença nesta
+enciclopédia possui caráter exclusivamente histórico.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+Getúlio Vargas
+</h3>
+
+<p>
+
+Getúlio Vargas foi uma das figuras mais influentes da
+história política brasileira do século XX.
+
+</p>
+
+<p>
+
+Seu período de governo coincidiu com importantes
+transformações econômicas e institucionais,
+incluindo a expansão da legislação trabalhista,
+o fortalecimento da administração federal e projetos
+de industrialização.
+
+</p>
+
+<p>
+
+Seu legado permanece objeto de intenso debate entre
+historiadores.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+João Goulart
+</h3>
+
+<p>
+
+João Goulart governou o Brasil entre 1961 e 1964.
+
+</p>
+
+<p>
+
+Seu governo esteve inserido em um contexto internacional
+marcado pela Guerra Fria e por intensos debates sobre
+reformas econômicas e sociais.
+
+</p>
+
+<p>
+
+As interpretações sobre seu governo variam amplamente
+entre diferentes correntes historiográficas.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Leonel Brizola
+</h3>
+
+<p>
+
+Leonel Brizola destacou-se como liderança política
+associada ao trabalhismo brasileiro.
+
+</p>
+
+<p>
+
+Participou da Campanha da Legalidade em 1961 e exerceu
+mandatos executivos em diferentes períodos.
+
+</p>
+
+<p>
+
+Também ficou conhecido por sua atuação em temas
+relacionados à educação pública.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Enéas Carneiro
+</h3>
+
+<p>
+
+Médico, professor e político brasileiro.
+
+</p>
+
+<p>
+
+Durante sua trajetória política, defendeu posições
+relacionadas ao desenvolvimento científico,
+tecnológico e energético do país.
+
+</p>
+
+<p>
+
+Tornou-se uma figura bastante conhecida nas eleições
+presidenciais da década de 1990.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="margin-bottom:20px;color:#0d3f31;">
+Debates Historiográficos
+</h3>
+
+<p>
+
+Uma característica importante da história política
+brasileira é a existência de interpretações divergentes
+sobre praticamente todos os períodos e personagens
+históricos relevantes.
+
+</p>
+
+<p>
+
+Por essa razão, pesquisadores frequentemente utilizam
+fontes variadas e diferentes abordagens metodológicas
+para compreender os acontecimentos do passado.
+
+</p>
+
+<p>
+
+O estudo do nacionalismo brasileiro envolve dimensões
+econômicas, culturais, institucionais, sociais e
+geopolíticas que não podem ser reduzidas a uma única
+interpretação.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Linha do Tempo Histórica
+</h2>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1822 — Independência do Brasil
+</h3>
+
+<p>
+
+A Independência marcou o surgimento do Estado brasileiro
+como entidade política soberana. A partir desse momento,
+passou a existir o desafio de construir instituições,
+manter a unidade territorial e consolidar uma identidade
+nacional comum em um território de dimensões continentais.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1889 — Proclamação da República
+</h3>
+
+<p>
+
+A mudança de regime político trouxe novas discussões
+sobre federalismo, modernização administrativa,
+organização econômica e integração nacional.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1930 — Transformações Econômicas
+</h3>
+
+<p>
+
+A década de 1930 representou uma mudança importante
+na estrutura econômica brasileira, com ampliação
+do papel do Estado e maior atenção aos processos
+de industrialização e infraestrutura.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1956–1961 — Plano de Metas
+</h3>
+
+<p>
+
+O período ficou conhecido por investimentos em
+transportes, energia, indústria e pela construção
+de Brasília, considerada um dos maiores projetos
+de interiorização do desenvolvimento nacional.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1960–1980 — Expansão Industrial
+</h3>
+
+<p>
+
+Durante essas décadas o país experimentou forte
+crescimento industrial, expansão energética,
+investimentos em infraestrutura e crescimento urbano.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+1988 — Nova Constituição
+</h3>
+
+<p>
+
+A Constituição Federal de 1988 redefiniu a estrutura
+institucional brasileira após o processo de redemocratização.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3 style="color:#0d3f31;margin-bottom:20px;">
+Século XXI
+</h3>
+
+<p>
+
+Questões relacionadas à competitividade econômica,
+inovação tecnológica, soberania energética,
+infraestrutura e inserção internacional continuam
+presentes nos debates públicos contemporâneos.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Galeria Histórica
+</h2>
+
+<p class="section-subtitle">
+
+Para melhor estabilidade, recomenda-se utilizar
+imagens PNG armazenadas localmente na pasta
+"imagens" do projeto.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="imagens/vargas.png"
+style="width:100%;border-radius:10px;margin-bottom:15px;">
 
 <h3>Getúlio Vargas</h3>
 
 <p>
 
-Presidente brasileiro associado à industrialização, legislação
-trabalhista e fortalecimento das instituições federais.
+Figura central da política brasileira do século XX.
 
 </p>
 
 </div>
 
-</div>
+<div class="card">
 
-<div class="figura">
-
-<img src="imagens/brizola.png" alt="Leonel Brizola">
-
-<div>
-
-<h3>Leonel Brizola</h3>
-
-<p>
-
-Político ligado ao trabalhismo e conhecido por sua atuação em temas
-como educação pública e desenvolvimento regional.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="figura">
-
-<img src="imagens/eneas.png" alt="Enéas Carneiro">
-
-<div>
-
-<h3>Enéas Carneiro</h3>
-
-<p>
-
-Médico, professor e político que defendia investimentos em ciência,
-tecnologia e desenvolvimento nacional.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="figura">
-
-<img src="imagens/jango.png" alt="João Goulart">
-
-<div>
+<img src="imagens/jango.png"
+style="width:100%;border-radius:10px;margin-bottom:15px;">
 
 <h3>João Goulart</h3>
 
 <p>
 
-Presidente do Brasil entre 1961 e 1964, associado a debates sobre
-reformas econômicas e sociais.
+Presidente do Brasil entre 1961 e 1964.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="imagens/brizola.png"
+style="width:100%;border-radius:10px;margin-bottom:15px;">
+
+<h3>Leonel Brizola</h3>
+
+<p>
+
+Importante liderança trabalhista brasileira.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="imagens/eneas.png"
+style="width:100%;border-radius:10px;margin-bottom:15px;">
+
+<h3>Enéas Carneiro</h3>
+
+<p>
+
+Médico, professor e político brasileiro.
 
 </p>
 
@@ -329,15 +1255,351 @@ reformas econômicas e sociais.
 
 </section>
 
-<footer>
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Bibliografia e Referências
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+📚 Celso Furtado
+</h3>
 
 <p>
 
-Portal educativo sobre história política brasileira.
+Economista conhecido por seus estudos sobre
+desenvolvimento econômico e formação econômica do Brasil.
 
 </p>
 
+</div>
+
+<div class="card">
+
+<h3>
+📚 Darcy Ribeiro
+</h3>
+
+<p>
+
+Antropólogo e intelectual que produziu importantes
+estudos sobre a formação do povo brasileiro.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+📚 Hélio Jaguaribe
+</h3>
+
+<p>
+
+Pensador político e estudioso das estratégias
+de desenvolvimento nacional.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+📚 Alberto Torres
+</h3>
+
+<p>
+
+Autor frequentemente associado aos estudos
+sobre organização nacional e instituições.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+📚 Guerreiro Ramos
+</h3>
+
+<p>
+
+Sociólogo que desenvolveu reflexões sobre
+administração pública e desenvolvimento.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+📚 Caio Prado Júnior
+</h3>
+
+<p>
+
+Historiador e intelectual influente nos estudos
+sobre a formação histórica do Brasil.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Debates e Interpretações
+</h2>
+
+<div class="text-block">
+
+<p>
+
+O nacionalismo brasileiro não constitui uma corrente
+intelectual única. Ao longo da história, diferentes
+autores e movimentos atribuíram significados distintos
+à ideia de interesse nacional.
+
+</p>
+
+<p>
+
+Algumas correntes enfatizaram industrialização,
+outras integração territorial, educação,
+modernização tecnológica ou fortalecimento institucional.
+
+</p>
+
+<p>
+
+Por isso, pesquisadores costumam analisar o tema
+considerando múltiplas interpretações históricas.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Perguntas Frequentes
+</h2>
+
+<div class="text-block">
+
+<h3>
+O nacionalismo brasileiro foi um movimento único?
+</h3>
+
+<p>
+
+Não. Ao longo da história existiram diferentes correntes,
+movimentos, partidos, intelectuais e interpretações.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3>
+Todos os nacionalistas defendiam as mesmas políticas?
+</h3>
+
+<p>
+
+Não. Muitas vezes existiam divergências profundas
+sobre economia, organização do Estado,
+política externa e questões sociais.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3>
+O desenvolvimento econômico é tema recorrente?
+</h3>
+
+<p>
+
+Sim. Industrialização, infraestrutura,
+energia e inovação tecnológica aparecem
+frequentemente nas discussões históricas.
+
+</p>
+
+</div>
+
+<div class="text-block">
+
+<h3>
+Qual o objetivo deste portal?
+</h3>
+
+<p>
+
+Apresentar informações históricas e educativas
+sobre o nacionalismo brasileiro e temas relacionados.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="
+background:#0d3f31;
+color:white;
+padding:80px 20px;
+margin-top:50px;
+">
+
+<div class="container">
+
+<h2 style="
+font-size:2rem;
+margin-bottom:20px;
+">
+
+🇧🇷 Enciclopédia do Nacionalismo Brasileiro
+
+</h2>
+
+<p style="
+max-width:900px;
+margin-bottom:30px;
+">
+
+Portal educativo dedicado ao estudo histórico,
+econômico, político, social e cultural do Brasil.
+
+</p>
+
+<div style="
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:40px;
+">
+
+<span>📚 História</span>
+<span>🏛 Instituições</span>
+<span>🏭 Economia</span>
+<span>⚙ Desenvolvimento</span>
+<span>🌎 Geopolítica</span>
+<span>🇧🇷 Cultura</span>
+
+</div>
+
+<hr style="
+border:none;
+border-top:1px solid rgba(255,255,255,.2);
+margin:30px 0;
+">
+
+<p>
+
+© 2026 — Enciclopédia do Nacionalismo Brasileiro.
+Conteúdo histórico e educativo.
+
+</p>
+
+</div>
+
 </footer>
 
+<script>
+
+/* Rolagem suave */
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(
+this.getAttribute("href")
+);
+
+if(target){
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+});
+
+/* Fade simples */
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(
+'.card,.text-block'
+).forEach(item=>{
+
+item.style.opacity="0";
+
+item.style.transform="translateY(25px)";
+
+item.style.transition="all .6s ease";
+
+observer.observe(item);
+
+});
+
+console.log(
+"Enciclopédia carregada."
+);
+
+</script>
+
 </body>
-  </html>
+</html>
